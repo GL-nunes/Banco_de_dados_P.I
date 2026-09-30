@@ -36,3 +36,15 @@ session.commit()
 
 lista_plantas = session.query(Planta).all() #query é uma consulta no banco de dados, all() retorna todos os registros da tabela
 print(lista_plantas)
+
+#fazer tabela separada para espécie e imagens
+#class Imagens(Base):
+#    Url = Column("Url",String,primary_key = True)
+#    qtd_imagens = Column("qtd_imagens",Integer,autoincrement=True)
+#    planta  = Column("planta",ForeignKey("plantas.id"))
+#
+#
+#    def __init__(self,Url,qtd_imagens,planta):
+#        self.Url = Url
+#        self.qtd_imagens = qtd_imagens
+#        self.planta = planta
