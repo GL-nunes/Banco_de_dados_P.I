@@ -48,3 +48,4 @@ print(lista_plantas)
 #        self.Url = Url
 #        self.qtd_imagens = qtd_imagens
 #        self.planta = planta
+
