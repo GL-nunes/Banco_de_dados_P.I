@@ -17,17 +17,19 @@ class Planta(Base):
     nome = Column("nome", String) #define o nome da coluna e qual tipo de informação que ele pode receber
     familia = Column("família",String)
     genero = Column("gênero",String)
+    flora = Column("flora",String )
 
-    def __init__(self,nome,familia,genero):
+    def __init__(self,nome,familia,genero,flora):
         self.nome = nome
         self.familia = familia
         self.genero = genero
+        self.flora = flora
 
 Base.metadata.create_all(bind = db)
-planta = Planta(nome = "Duranta - Erecta", familia = "Verbenaceae", genero = "Duranta")
-planta2 = Planta(nome="Adenium", familia="Apocynaceae",genero="Adenium")
-planta3 = Planta(nome="Psidium guajava L", familia="Myrtaceae", genero="Psidium")
-planta4 = Planta(nome="Mangifera indica L", familia="Anacardiaceae", genero="Mangifera")
+planta = Planta(nome = "Duranta - Erecta", familia = "Verbenaceae", genero = "Duranta" , flora="América Tropical")
+planta2 = Planta(nome="Adenium", familia="Apocynaceae",genero="Adenium",flora="Regiões áridas e semiáridas da África Subsaariana e da Península Arábica")
+planta3 = Planta(nome="Psidium guajava L", familia="Myrtaceae", genero="Psidium",flora="América Tropical")
+planta4 = Planta(nome="Mangifera indica L", familia="Anacardiaceae", genero="Mangifera",flora="Sul e Sudeste da Ásia")
 session.add(planta)
 session.add(planta2)
 session.add(planta3)
